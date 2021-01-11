@@ -4,15 +4,14 @@ const cors = require('cors');
 const fetch = require('node-fetch');
 const port = 8000;
 
-const app = express(); // Instance. In Java means object. 
+const app = express(); // Instance. 
                        // It is used instead of Object in particular occasions such as this exercise itself.
 
 app.use(express.static('website')); //express.static sets directory to server for static resources such as img, css stylesheets, js scripts...
-                                //the parameter is called 'root'.
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());  //configuring Express to use body-parser as middleware
-app.use(cors()); //cors for cross origin allowance.
+app.use(cors()); //and cors for cross origin allowance.
 
 const server = app.listen(port, () => console.log(`App listening on port: ${port}`));
 const appData = []; //endpoint array container
