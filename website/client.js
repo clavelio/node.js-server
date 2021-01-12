@@ -1,5 +1,5 @@
-/* const postData = async (url = '', data = {}) => {
-    const res = await fetch(url, {
+/*const postData = async (url = '', data = {}) => {
+    const res = await fetch (url, {
         method: 'POST',
         credentials: 'same-origin',
         headers: {
@@ -17,6 +17,5 @@
     };
 };
 
-postData('/data', {name: 'Claudio'}); */
-
-/* THIS FILE IS NOT IN USE UNTIL I GET TO MAKE IT SEND REQUESTS TO ROOT DIRECTORY*/
+postData(`http://localhost:${port}/data`, {name: 'Claudio'});
+postData(`http://localhost:${port}/data`, {name: 'Example'}); */
